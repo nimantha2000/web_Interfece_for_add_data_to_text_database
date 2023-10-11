@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q&A Web App</title>
+</head>
+<body>
+    <h1>Add New Question and Answer</h1>
+    <form action="/add" method="post">
+        <label for="question">Question:</label>
+        <input type="text" name="question" required><br><br>
+        <label for="answer">Answer:</label>
+        <input type="text" name="answer" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <h2>Questions and Answers:</h2>
+    <ul>
+        {% for q, a in data %}
+            <li>{{ q }} - {{ a }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
